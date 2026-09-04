@@ -29,8 +29,14 @@ export default defineConfig({
 					lang: 'ja',
 				},
 			},
-			customCss: [
-				'katex/dist/katex.min.css',
+			head: [
+				{
+					tag: 'link',
+					attrs: {
+						rel: 'stylesheet',
+						href: 'https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css',
+					},
+				},
 			],
 		}),
 	],
