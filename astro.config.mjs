@@ -52,6 +52,7 @@ export default defineConfig({
 			sidebar: [
 				{
 			    	label: 'Mathematics',
+					link: '/math/',
 			    	items: [{ autogenerate: { directory: 'math' } }],
 				},
   				{
