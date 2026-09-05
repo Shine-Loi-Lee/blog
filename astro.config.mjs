@@ -14,6 +14,7 @@ export default defineConfig({
 	integrations: [
 		starlight({
 			title: 'Shine on Me: Tech & Math Archive',
+			customCss: ['./src/styles/custom.css'],
 			defaultLocale: 'root',
 			locales: {
 				root: {
