@@ -28,7 +28,14 @@
 }
 
 @media (max-width: 50rem) {
-  starlight-select:has([name="language-select"]) {
+  header .right-group {
     display: flex !important;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  header starlight-select select {
+    padding-inline: 0.5rem 1.5rem !important;
+    font-size: 0.85rem !important;
   }
 }
