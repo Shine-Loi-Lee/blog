@@ -16,7 +16,7 @@ description: Projects
 ### [Project Title 2]
 > **Summary:** One-line project summary here.
 * **Tech Stack:** Tech Stack
-* **Status:** In Progress
+* **Status:** Completed
 * **Links:** [Example 1](#) | [Example 2](#)
 
 ---
