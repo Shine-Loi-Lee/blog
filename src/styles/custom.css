@@ -26,3 +26,9 @@
 .expressive-code {
   border-radius: 8px;
 }
+
+@media (max-width: 50rem) {
+  starlight-select:has([name="language-select"]) {
+    display: flex !important;
+  }
+}
