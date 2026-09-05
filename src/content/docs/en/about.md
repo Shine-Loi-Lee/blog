@@ -28,7 +28,7 @@ description: About Me
 * **SQLD (SQL Developer)** | K-DATA (Mar 2026 - Mar 2028)
 * **CCNA** | Cisco (Jan 2024 - Jan 2026)
 
-**언어**
-* **Languages:** Native
+**Languages**
+* **Korean:** Native
 * **English:** Fluent
 * **Japanese:** Conversational (JLPT N3)
