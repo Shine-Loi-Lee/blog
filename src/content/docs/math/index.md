@@ -1,6 +1,8 @@
 ---
 title: Mathematics
 description: Mathematics
+sidebar:
+ hidden: true
 ---
 
 * **미적분학 (Calculus)**
