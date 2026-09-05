@@ -13,7 +13,7 @@ export default defineConfig({
 	},
 	integrations: [
 		starlight({
-			title: '학습 노트 & 강의',
+			title: 'Shine on Me: Tech & Math Archive',
 			defaultLocale: 'root',
 			locales: {
 				root: {
