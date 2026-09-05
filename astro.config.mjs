@@ -39,6 +39,15 @@ export default defineConfig({
 						href: 'https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css',
 					},
 				},
+				{
+					tag: 'link',
+					attrs: {
+						rel: 'alternate',
+						type: 'application/rss+xml',
+						title: 'Shine on Me RSS Feed',
+						href: '/rss.xml',
+					},
+				},
 			],
 		}),
 	],
