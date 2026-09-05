@@ -23,7 +23,7 @@ description: Categories
   * Programming English
 * Japanese
 
-## [Projects](/projects/)
+## [Projects](/en/projects/)
 
 ## Beyond Tech
 
