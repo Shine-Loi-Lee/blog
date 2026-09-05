@@ -50,39 +50,39 @@ export default defineConfig({
 				},
 			],
 			sidebar: [
-        		{
-          			label: 'Mathematics',
-          			autogenerate: { directory: 'math' },
-        		},
 				{
-          			label: 'Computer Science',
-          			autogenerate: { directory: 'cs' },
-        		},
+			    	label: 'Mathematics',
+			    	items: [{ autogenerate: { directory: 'math' } }],
+				},
+  				{
+			    	label: 'Computer Science',
+			    	items: [{ autogenerate: { directory: 'cs' } }],
+				},
+  				{
+    				label: 'Programming Languages',
+    				items: [{ autogenerate: { directory: 'plang' } }],
+  				},
+  				{
+    				label: 'Physics',
+    				items: [{ autogenerate: { directory: 'physics' } }],
+  				},
+  				{
+    				label: 'Languages & Linguistics',
+    				items: [{ autogenerate: { directory: 'lang' } }],
+  				},
 				{
-          			label: 'Programming Languages',
-          			autogenerate: { directory: 'plang' },
-        		},
-        		{
-          			label: 'Physics',
-          			autogenerate: { directory: 'physics' },
-        		},
-				{
-          			label: 'Languages & Linguistics',
-          			autogenerate: { directory: 'lang' },
-        		},
-				{
-          			label: 'Projects',
-          			link: '/projects/',
-        		},
-				{
-          			label: 'Beyond Tech',
-          			autogenerate: { directory: 'beyond' },
-        		},
-				{
-          			label: 'Life',
-          			autogenerate: { directory: 'life' },
-        		},
-      		],
+    				label: 'Projects',
+			    	link: '/projects/',
+				},
+  				{
+    				label: 'Beyond Tech',
+    				items: [{ autogenerate: { directory: 'beyond' } }],
+  				},
+  				{
+    				label: 'Life',
+    				items: [{ autogenerate: { directory: 'life' } }],
+  				},
+			],
 		}),
 	],
 });
