@@ -1,11 +1,19 @@
 /* src/styles/custom.css */
 
 :root {
+  --sl-content-width: 50rem;
+  --sl-font-system-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Pretendard", sans-serif;
+  --sl-font-system-mono: "JetBrains Mono", "Fira Code", Menlo, Monaco, Consolas, monospace;
+}
+
+:root[data-theme='light'] {
+  --sl-color-bg: #ffffff;
+  --sl-color-bg-nav: #f8fafc;
+  --sl-color-text: #0f172a;
+
   --sl-color-accent-low: #e0f2fe;
   --sl-color-accent: #0284c7;
   --sl-color-accent-high: #0369a1;
-
-  --sl-content-width: 50rem;
 }
 
 :root[data-theme='dark'] {
@@ -16,11 +24,6 @@
   --sl-color-accent-low: #082f49;
   --sl-color-accent: #38bdf8;
   --sl-color-accent-high: #bae6fd;
-}
-
-:root {
-  --sl-font-system-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Pretendard", sans-serif;
-  --sl-font-system-mono: "JetBrains Mono", "Fira Code", Menlo, Monaco, Consolas, monospace;
 }
 
 .expressive-code {
