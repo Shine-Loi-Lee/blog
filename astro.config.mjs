@@ -51,6 +51,10 @@ export default defineConfig({
 			],
 			sidebar: [
 				{
+    				label: 'Categories',
+			    	link: '/categories/',
+				},
+				{
 			    	label: 'Mathematics',
 					collapsed: true,
 			    	items: [{
@@ -66,35 +70,62 @@ export default defineConfig({
 				},
   				{
 			    	label: 'Computer Science',
+					collapsed: true,
 			    	items: [{ autogenerate: { 
 						directory: 'cs',
 						collapsed: true,
 					} }],
-					collapsed: true,
 				},
   				{
     				label: 'Programming Languages',
-    				items: [{ autogenerate: { 
-						directory: 'plang',
-						collapsed: true,
-					} }],
 					collapsed: true,
+					items: [{
+						label: 'Object-Oriented Paradigm',
+						collapsed: true,
+						items: [{
+								autogenerate: {
+									directory: 'plang/oop',
+								},
+							},
+						],
+					},
+					{
+						label: 'C++',
+						collapsed: true,
+						items: [{
+								autogenerate: {
+									directory: 'plang/cpp',
+								},
+							},
+						],
+					},
+					{
+						label: 'Python',
+						collapsed: true,
+						items: [{
+								autogenerate: {
+									directory: 'plang/python',
+								},
+							},
+						],
+					}
+					],
   				},
   				{
     				label: 'Physics',
+					collapsed: true,
     				items: [{ autogenerate: { 
 						directory: 'physics',
 						collapsed: true,
 					} }],
-					collapsed: true,
   				},
   				{
     				label: 'Languages & Linguistics',
+					collapsed: true,
     				items: [{ autogenerate: { 
 						directory: 'lang',
 						collapsed: true,
 					} }],
-					collapsed: true,
   				},
 				{
     				label: 'Projects',
@@ -102,19 +133,19 @@ export default defineConfig({
 				},
   				{
     				label: 'Beyond Tech',
+					collapsed: true,
     				items: [{ autogenerate: { 
 						directory: 'beyond',
 						collapsed: true,
 					} }],
-					collapsed: true,
   				},
   				{
     				label: 'Life',
+					collapsed: true,
     				items: [{ autogenerate: { 
 						directory: 'life',
 						collapsed: true,
 					} }],
-					collapsed: true,
   				},
 			],
 		}),
