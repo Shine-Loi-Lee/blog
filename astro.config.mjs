@@ -53,10 +53,16 @@ export default defineConfig({
 				{
 			    	label: 'Mathematics',
 					collapsed: true,
-			    	items: [{ autogenerate: { 
-						directory: 'math',
+			    	items: [{
+						label: 'Linear Algebra',
 						collapsed: true,
-					} }],
+						items: [{
+								autogenerate: {
+									directory: 'math/linear-algebra',
+								},
+							},
+						],
+					}],
 				},
   				{
 			    	label: 'Computer Science',
