@@ -2,6 +2,8 @@
 title: 0. 선형대수학 개요
 description: 선형대수학 개요
 sidebar:
+  group:
+    label: Linear Algebra
   order: 0
 ---
 
