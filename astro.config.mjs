@@ -53,22 +53,27 @@ export default defineConfig({
 				{
 			    	label: 'Mathematics',
 			    	items: [{ autogenerate: { directory: 'math' } }],
+					collapsed: true,
 				},
   				{
 			    	label: 'Computer Science',
 			    	items: [{ autogenerate: { directory: 'cs' } }],
+					collapsed: true,
 				},
   				{
     				label: 'Programming Languages',
     				items: [{ autogenerate: { directory: 'plang' } }],
+					collapsed: true,
   				},
   				{
     				label: 'Physics',
     				items: [{ autogenerate: { directory: 'physics' } }],
+					collapsed: true,
   				},
   				{
     				label: 'Languages & Linguistics',
     				items: [{ autogenerate: { directory: 'lang' } }],
+					collapsed: true,
   				},
 				{
     				label: 'Projects',
@@ -77,10 +82,12 @@ export default defineConfig({
   				{
     				label: 'Beyond Tech',
     				items: [{ autogenerate: { directory: 'beyond' } }],
+					collapsed: true,
   				},
   				{
     				label: 'Life',
     				items: [{ autogenerate: { directory: 'life' } }],
+					collapsed: true,
   				},
 			],
 		}),
