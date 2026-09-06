@@ -63,6 +63,7 @@ export default defineConfig({
 						directory: 'cs',
 						collapsed: true,
 					} }],
+					collapsed: true,
 				},
   				{
     				label: 'Programming Languages',
@@ -70,6 +71,7 @@ export default defineConfig({
 						directory: 'plang',
 						collapsed: true,
 					} }],
+					collapsed: true,
   				},
   				{
     				label: 'Physics',
@@ -77,6 +79,7 @@ export default defineConfig({
 						directory: 'physics',
 						collapsed: true,
 					} }],
+					collapsed: true,
   				},
   				{
     				label: 'Languages & Linguistics',
@@ -84,6 +87,7 @@ export default defineConfig({
 						directory: 'lang',
 						collapsed: true,
 					} }],
+					collapsed: true,
   				},
 				{
     				label: 'Projects',
@@ -95,6 +99,7 @@ export default defineConfig({
 						directory: 'beyond',
 						collapsed: true,
 					} }],
+					collapsed: true,
   				},
   				{
     				label: 'Life',
@@ -102,6 +107,7 @@ export default defineConfig({
 						directory: 'life',
 						collapsed: true,
 					} }],
+					collapsed: true,
   				},
 			],
 		}),
