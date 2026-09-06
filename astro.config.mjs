@@ -52,10 +52,13 @@ export default defineConfig({
 			sidebar: [
 				{
 			    	label: 'Mathematics',
-			    	items: [{ autogenerate: { 
-						directory: 'math',
-						collapsed: true,
-					} }],
+			    	items: [
+						{
+							label: 'Linear Algebra',
+							collapsed: true,
+							items: [{ autogenerate: { directory: 'math/linear-algebra' } }],
+						},
+					],
 					collapsed: true,
 				},
   				{
