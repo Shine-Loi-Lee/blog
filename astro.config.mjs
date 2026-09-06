@@ -57,7 +57,18 @@ export default defineConfig({
 				{
 			    	label: 'Mathematics',
 					collapsed: true,
-			    	items: [{
+			    	items: [
+						{
+						label: 'Calculus',
+						collapsed: true,
+						items: [{
+								autogenerate: {
+									directory: 'math/calculus',
+								},
+							},
+						],
+						},
+						{
 						label: 'Linear Algebra',
 						collapsed: true,
 						items: [{
