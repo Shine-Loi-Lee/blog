@@ -56,7 +56,7 @@ export default defineConfig({
 						{
 							label: 'Linear Algebra',
 							collapsed: true,
-							items: [{ autogenerate: { directory: 'math/linear-algebra' } }],
+							autogenerate: { directory: 'math/linear-algebra' },
 						},
 					],
 					collapsed: true,
