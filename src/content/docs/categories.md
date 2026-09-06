@@ -4,14 +4,15 @@ description: Categories
 ---
 
 ## Mathematics
-* Calculus
-* Linear Algebra
+* [Calculus](/math/calculus/)
+* [Linear Algebra](/math/linear-algebra/)
 
 ## Computer Science
 * Algorithms
 * Computer Architecture
 
 ## Programming Languages
+* Object-Oriented Paradigm
 * C++
 * Python
 
