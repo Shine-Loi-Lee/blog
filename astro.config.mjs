@@ -56,6 +56,7 @@ export default defineConfig({
 						directory: 'math',
 						collapsed: true,
 					} }],
+					collapsed: true,
 				},
   				{
 			    	label: 'Computer Science',
