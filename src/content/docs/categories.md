@@ -3,9 +3,9 @@ title: Categories
 description: Categories
 ---
 
-## Mathematics
-* [Calculus](/math/calculus/)
-* [Linear Algebra](/math/linear-algebra/)
+## [Mathematics](/math/)
+* [Calculus (미적분학)](/math/calculus/)
+* [Linear Algebra (선형대수학)](/math/linear-algebra/)
 
 ## Computer Science
 * Algorithms
