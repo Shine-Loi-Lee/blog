@@ -17,7 +17,10 @@ description: Categories
 * Python
 
 ## Physics
-* Classical Mechanics
+* [Classical Mechanics (고전역학)](/physics/physics/)
+* Electromagnetism (전자기학)
+* Thermodynamics (열역학)
+* Quantum Mechanics (양자역학)
 
 ## Languages & Linguistics
 * English
