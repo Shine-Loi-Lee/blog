@@ -125,10 +125,48 @@ export default defineConfig({
   				{
     				label: 'Physics',
 					collapsed: true,
-    				items: [{ autogenerate: { 
-						directory: 'physics',
+    				items: [
+						{
+						label: 'Classical Mechanics',
 						collapsed: true,
-					} }],
+						items: [{
+								autogenerate: {
+									directory: 'physics/physics',
+								},
+							},
+						],
+					},
+					{
+						label: 'Electromagnetism',
+						collapsed: true,
+						items: [{
+								autogenerate: {
+									directory: 'physics/em',
+								},
+							},
+						],
+					},
+					{
+						label: 'Thermodynamics',
+						collapsed: true,
+						items: [{
+								autogenerate: {
+									directory: 'physics/thermo',
+								},
+							},
+						],
+					},
+					{
+						label: 'Quantum Mechanics',
+						collapsed: true,
+						items: [{
+								autogenerate: {
+									directory: 'physics/qm',
+								},
+							},
+						],
+					},
+					],
   				},
   				{
     				label: 'Languages & Linguistics',
