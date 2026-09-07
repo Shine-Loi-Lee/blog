@@ -16,7 +16,7 @@ description: Categories
 * C++
 * Python
 
-## Physics
+## [Physics](/physics/)
 * [Classical Mechanics (고전역학)](/physics/physics/)
 * Electromagnetism (전자기학)
 * Thermodynamics (열역학)
