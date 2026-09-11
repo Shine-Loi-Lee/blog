@@ -49,154 +49,134 @@ export default defineConfig({
 					},
 				},
 			],
-			sidebar: [
-				{
+			sidebar: [{
     				label: 'Categories',
 			    	link: '/categories/',
 				},
-				{
+				{ // Mathematics
 			    	label: 'Mathematics',
 					collapsed: true,
-			    	items: [
-						{
+			    	items: [{ // \Calculus
 						label: 'Calculus',
 						collapsed: true,
-						items: [{
-								autogenerate: {
+						items: [{autogenerate: {
 									directory: 'math/calculus',
-								},
-							},
-						],
-						},
-						{
+								}}],
+						}, // \Calculus
+						{ // \Linear Algebra
 						label: 'Linear Algebra',
 						collapsed: true,
 						items: [{
 								autogenerate: {
 									directory: 'math/linear-algebra',
-								},
-							},
-						],
-					}],
-				},
-  				{
+								}}],
+					}], // \Linear Algebra
+				}, // Mathematics
+				{ // Computer Science
 			    	label: 'Computer Science',
 					collapsed: true,
-			    	items: [{ autogenerate: { 
-						directory: 'cs',
+			    	items: [{ // \Programming Paradigms
+						label: 'Programming Paradigms',
 						collapsed: true,
-					} }],
-				},
-  				{
+						items: [{
+							autogenerate: {
+								directory: 'cs/programming-paradigms',
+							}}],
+					}], // \Programming Paradigms
+				}, // Computer Science
+				{ // Programming Languages
     				label: 'Programming Languages',
 					collapsed: true,
-					items: [{
-						label: 'Object-Oriented Paradigm',
+					items: [{ // Programming Fundamentals
+						label: 'Programming Fundamentals',
 						collapsed: true,
 						items: [{
 								autogenerate: {
-									directory: 'plang/oop',
-								},
-							},
-						],
-					},
-					{
+									directory: 'plang/programming-fundamentals',
+								}}],
+					}, // Programming Fundamentals
+					{ // \C++
 						label: 'C++',
 						collapsed: true,
 						items: [{
 								autogenerate: {
 									directory: 'plang/cpp',
-								},
-							},
-						],
-					},
-					{
+								}}],
+					}, // \C++
+					{ // \Python
 						label: 'Python',
 						collapsed: true,
 						items: [{
 								autogenerate: {
 									directory: 'plang/python',
-								},
-							},
-						],
-					}
-					],
-  				},
-  				{
+								}}],
+					}], // \Python
+  				}, // Programming Languages
+				{ // Physics
     				label: 'Physics',
 					collapsed: true,
-    				items: [
-						{
+    				items: [{ // Classical Mechanics
 						label: 'Classical Mechanics',
 						collapsed: true,
 						items: [{
 								autogenerate: {
-									directory: 'physics/physics',
-								},
-							},
-						],
-					},
-					{
+									directory: 'physics/classical-mechanics',
+								}}],
+					}, // Classical Mechanics
+					{ // \Electromagnetism
 						label: 'Electromagnetism',
 						collapsed: true,
 						items: [{
 								autogenerate: {
 									directory: 'physics/em',
-								},
-							},
-						],
-					},
-					{
+								}}],
+					}, // \Electromagnetism
+					{ // \Thermodynamics
 						label: 'Thermodynamics',
 						collapsed: true,
 						items: [{
 								autogenerate: {
 									directory: 'physics/thermo',
-								},
-							},
-						],
-					},
-					{
+								}}],
+					}, // \Thermodynamics
+					{ // \Quantum Mechanics
 						label: 'Quantum Mechanics',
 						collapsed: true,
 						items: [{
 								autogenerate: {
 									directory: 'physics/qm',
-								},
-							},
-						],
-					},
-					],
-  				},
-  				{
+								}}],
+					}], // \Quantum Mechanics
+  				}, // Physics
+				{ // Languages & Linguistics
     				label: 'Languages & Linguistics',
 					collapsed: true,
     				items: [{ autogenerate: { 
 						directory: 'lang',
 						collapsed: true,
-					} }],
-  				},
-				{
+					}}],
+  				}, // Languages & Linguistics
+				{ // Projects
     				label: 'Projects',
 			    	link: '/projects/',
-				},
-  				{
+				}, // Projects
+				{ // Beyond Tech
     				label: 'Beyond Tech',
 					collapsed: true,
     				items: [{ autogenerate: { 
 						directory: 'beyond',
 						collapsed: true,
-					} }],
-  				},
-  				{
+					}}],
+  				},// Beyond Tech
+				{ // Life
     				label: 'Life',
 					collapsed: true,
     				items: [{ autogenerate: { 
 						directory: 'life',
 						collapsed: true,
-					} }],
-  				},
-			],
+					}}],
+  				} // Life
+			], // Sidebar
 		}),
 	],
 });
