@@ -13,7 +13,7 @@ export default defineConfig({
 		rehypePlugins: [rehypeKatex],
 	},
 	integrations: [
-		starlight({
+		starlight({ // Starlight
 			title: 'Shine on Me: Tech & Math Archive',
 			customCss: ['./src/styles/custom.css'],
 			defaultLocale: 'root',
@@ -39,7 +39,7 @@ export default defineConfig({
 						href: 'https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css',
 					},
 				},
-				{
+				{ // RSS
 					tag: 'link',
 					attrs: {
 						rel: 'alternate',
@@ -47,12 +47,12 @@ export default defineConfig({
 						title: 'Shine on Me RSS Feed',
 						href: '/rss.xml',
 					},
-				},
+				}, // RSS
 			],
-			sidebar: [{
+			sidebar: [{ // Categories
     				label: 'Categories',
 			    	link: '/categories/',
-				},
+				}, // Categories
 				{ // Mathematics
 			    	label: 'Mathematics',
 					collapsed: true,
@@ -177,6 +177,6 @@ export default defineConfig({
 					}}],
   				} // Life
 			], // Sidebar
-		}),
+		}), // Starlight
 	],
-});
+}); // defineConfig
