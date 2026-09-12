@@ -1,6 +1,7 @@
 ---
 title: Categories
 description: Categories
+template: splash
 ---
 
 ## [Mathematics](/math/)
