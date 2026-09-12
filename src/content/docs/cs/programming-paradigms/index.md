@@ -5,13 +5,13 @@ sidebar:
   order: 0
 ---
 
-## 1. 개요
+## 개요
 **Programming Paradigms (프로그래밍 패러다임)**: 문제를 해결하기 위해 데이터와 연산을 구조화하는 프로그래밍의 근본적인 설계 철학을 설명한다.
 
-## 2. 선수과목
+## 선수과목
 * [Programming Fundamentals](/plang/programming-fundamentals/)
 
-## 3. 학습 로드맵 (임시, 수정 예정)
+## 학습 로드맵 (임시, 수정 예정)
 #### Phase 1: 절차적 패러다임 (Procedual Programming)
 * [1-1. 절차적 패러다임 개요](#)
 * [1-2. 상태와 제어 흐름](#)
