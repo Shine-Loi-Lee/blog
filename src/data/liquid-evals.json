@@ -2,13 +2,13 @@
   "plang/programming-fundamentals/1-1-terms": {
     "scores": {
       "linkedKnowledge": 6,
-      "intuitiveInterface": 8,
-      "qualitativeLearning": 6,
-      "understandableExplanation": 8,
-      "interactiveExperience": 3,
-      "deepDive": 5
+      "intuitiveInterface": 8.5,
+      "qualitativeLearning": 6.5,
+      "understandableExplanation": 8.5,
+      "interactiveExperience": 4,
+      "deepDive": 5.5
     },
-    "totalScore": 6,
-    "comment": "The document provides a clean, well-structured, and highly readable introduction to essential software development terms using clear comparative tables and flow summaries. However, it functions predominantly as a passive glossary, lacking interactive cognitive prompts and deeper theoretical exploration into low-level execution mechanics. To fully align with the LIQUID framework, it needs to incorporate active inquiry elements and bridge basic terminology with advanced system-level concepts."
+    "totalScore": 6.5,
+    "comment": "The document excels in structured visual formatting and concise, accessible explanations of fundamental development terms. However, it operates primarily as a passive glossary, lacking interactive inquiry prompts and granular theoretical mechanics such as AST parsing or static versus dynamic linking."
   }
 }
