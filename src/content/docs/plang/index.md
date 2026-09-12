@@ -1,6 +1,8 @@
 ---
 title: Programming Languages
 description: Programming Languages
+tableOfContents: false
+liquidEval: false
 sidebar:
  hidden: true
 ---

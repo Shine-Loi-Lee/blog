@@ -2,6 +2,8 @@
 // src/components/CustomMarkdownContent.astro
 import Default from '@astrojs/starlight/components/MarkdownContent.astro';
 
+import LiquidEval from './LiquidEval.astro';
+
 const starlightRoute = Astro.locals?.starlightRoute;
 
 const entryData = starlightRoute?.entry?.data ?? Astro.props?.entry?.data;
@@ -23,6 +25,8 @@ const tocTitles: Record<string, string> = {
 
 const tocTitle = tocTitles[currentLang] ?? '목차';
 ---
+
+{!isSplash && <LiquidEval />}
 
 {showToc && (
   <nav class="page-inline-toc" aria-label={tocTitle}>

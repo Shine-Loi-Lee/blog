@@ -1,6 +1,8 @@
 ---
 title: Mathematics
 description: Mathematics
+tableOfContents: false
+liquidEval: false
 sidebar:
  hidden: true
 ---

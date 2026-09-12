@@ -2,6 +2,7 @@
 title: Categories
 description: Categories
 tableOfContents: false
+liquidEval: false
 ---
 
 ## [Mathematics](/math/)

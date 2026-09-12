@@ -1,6 +1,7 @@
 ---
 title: 0. Calculus 개요
 description: Calculus 개요
+liquidEval: false
 sidebar:
   order: 0
 ---

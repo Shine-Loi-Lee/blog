@@ -1,6 +1,7 @@
 ---
 title: About Me
 description: About Me
+liquidEval: false
 ---
 
 ## Basic Information

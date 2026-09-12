@@ -1,6 +1,7 @@
 ---
 title: About Me
 description: About Me
+liquidEval: false
 ---
 
 ## 기본 정보

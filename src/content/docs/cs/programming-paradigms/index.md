@@ -1,6 +1,7 @@
 ---
 title: 0. Programming Paradigms 개요
 description: Programming Paradigms 개요
+liquidEval: false
 sidebar:
   order: 0
 ---

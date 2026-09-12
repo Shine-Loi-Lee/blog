@@ -1,6 +1,7 @@
 ---
 title: Categories
 description: Categories
+liquidEval: false
 ---
 
 ## Mathematics

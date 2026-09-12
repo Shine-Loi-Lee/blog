@@ -1,6 +1,7 @@
 ---
 title: 0. Linear Algebra 개요
 description: Linear Algebra 개요
+liquidEval: false
 sidebar:
   order: 0
 ---

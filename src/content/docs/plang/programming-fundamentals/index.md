@@ -1,6 +1,7 @@
 ---
 title: 0. Programming Fundamentals 개요
 description: Programming Fundamentals 개요
+liquidEval: false
 sidebar:
   order: 0
 ---

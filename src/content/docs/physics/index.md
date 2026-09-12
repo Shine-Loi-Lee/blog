@@ -1,6 +1,8 @@
 ---
 title: Physics
 description: Physics
+tableOfContents: false
+liquidEval: false
 sidebar:
  hidden: true
 ---

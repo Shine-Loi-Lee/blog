@@ -1,6 +1,7 @@
 ---
 title: Projects
 description: Projects
+liquidEval: false
 ---
 
 ## Active Projects

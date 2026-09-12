@@ -1,6 +1,7 @@
 ---
 title: 0. Classical Mechanics 개요
 description: Classical Mechanics 개요
+liquidEval: false
 sidebar:
   order: 0
 ---
