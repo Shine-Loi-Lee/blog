@@ -5,14 +5,14 @@ sidebar:
   order: 0
 ---
 
-## 1. 개요
+## 개요
 **Classical Mechanics (고전역학)**: 
 
-## 2. 선수 과목
+## 선수 과목
 * [Calculus (미적분학)](/math/calculus/)
 * [Linear Algebra (선형대수학)](/math/linear-algebra/)
 
-## 3. 학습 로드맵 (임시, 수정 예정)
+## 학습 로드맵 (임시, 수정 예정)
 #### Phase 1: 물체의 운동 (Kinematics)
 물체가 시간에 따라 이동하는 기하학적 궤도를 계산한다.
 * [1-1. 위치, 속도, 가속도](#)
