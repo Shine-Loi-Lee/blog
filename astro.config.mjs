@@ -19,6 +19,7 @@ export default defineConfig({
 			defaultLocale: 'root',
 			components: {
 				Pagination: './src/components/CustomPagination.astro',
+				MarkdownContent: './src/components/CustomMarkdownContent.astro',
 			},
 			locales: {
 				root: {
