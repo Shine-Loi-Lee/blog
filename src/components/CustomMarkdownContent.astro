@@ -6,11 +6,11 @@ const starlightRoute = Astro.locals?.starlightRoute;
 const template = starlightRoute?.entry?.data?.template ?? Astro.props?.entry?.data?.template;
 const isSplash = template === 'splash';
 
-const toc = starlightRoute?.toc?.items ?? [];
+const rawToc = starlightRoute?.toc?.items ?? [];
+const toc = rawToc.filter((item: any) => item.slug !== '_top' && item.slug !== '');
 const hasToc = toc.length > 0;
 
 const currentLang = starlightRoute?.lang ?? 'ko';
-
 const tocTitles: Record<string, string> = {
   ko: '목차',
   en: 'Table of Contents',
