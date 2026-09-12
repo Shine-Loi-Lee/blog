@@ -4,9 +4,7 @@ import path from 'path';
 
 const starlightRoute = Astro.locals?.starlightRoute;
 const rawDocId = starlightRoute?.id ?? '';
-
 const docId = rawDocId.replace(/^(en|ja)\//, '');
-
 const currentLang = (starlightRoute?.lang ?? 'ko') as 'ko' | 'en' | 'ja';
 
 const i18n = {
@@ -15,12 +13,12 @@ const i18n = {
     total: '종합 점수',
     commentHeader: 'AI 비평 총평',
     axes: {
-      fluidity: '유동성',
-      interconnectivity: '상호연결성',
-      adaptability: '적응성',
-      nonFixity: '비고정성',
-      openness: '개방성',
-      clarity: '명료성',
+      linkedKnowledge: 'L: 연계 지식',
+      intuitiveInterface: 'I: 직관적 흐름',
+      qualitativeLearning: 'Q: 질적 배움',
+      understandableExplanation: 'U: 명료한 설명',
+      interactiveExperience: 'I: 상호작용성',
+      deepDive: 'D: 심층 탐구',
     },
   },
   en: {
@@ -28,12 +26,12 @@ const i18n = {
     total: 'Total Score',
     commentHeader: 'AI Critical Synthesis',
     axes: {
-      fluidity: 'Fluidity',
-      interconnectivity: 'Interconnectivity',
-      adaptability: 'Adaptability',
-      nonFixity: 'Non-Fixity',
-      openness: 'Openness',
-      clarity: 'Clarity',
+      linkedKnowledge: 'L: Linked Knowledge',
+      intuitiveInterface: 'I: Intuitive Flow',
+      qualitativeLearning: 'Q: Qualitative Learning',
+      understandableExplanation: 'U: Understandable',
+      interactiveExperience: 'I: Interactive',
+      deepDive: 'D: Deep Dive',
     },
   },
   ja: {
@@ -41,12 +39,12 @@ const i18n = {
     total: '総合スコア',
     commentHeader: 'AI 批評総評',
     axes: {
-      fluidity: '流動性',
-      interconnectivity: '相互接続性',
-      adaptability: '適応性',
-      nonFixity: '非固定性',
-      openness: '開放性',
-      clarity: '明瞭性',
+      linkedKnowledge: 'L: 連結知識',
+      intuitiveInterface: 'I: 直感的構造',
+      qualitativeLearning: 'Q: 質的学習',
+      understandableExplanation: 'U: 明瞭な説明',
+      interactiveExperience: 'I: 相互作用',
+      deepDive: 'D: 深層探求',
     },
   },
 };
@@ -62,12 +60,12 @@ if (fs.existsSync(dataPath)) {
 
 function getPoints(scores: any) {
   const values = [
-    scores.fluidity,
-    scores.interconnectivity,
-    scores.adaptability,
-    scores.nonFixity,
-    scores.openness,
-    scores.clarity,
+    scores.linkedKnowledge,
+    scores.intuitiveInterface,
+    scores.qualitativeLearning,
+    scores.understandableExplanation,
+    scores.interactiveExperience,
+    scores.deepDive,
   ];
 
   const centerX = 150;
@@ -95,22 +93,22 @@ function getPoints(scores: any) {
 
     <div class="liquid-content">
       <div class="chart-container">
-        <svg viewBox="0 0 300 300" class="radar-chart" aria-label="Liquid Radar Chart">
+        <svg viewBox="0 0 300 300" class="radar-chart" aria-label="LIQUID Radar Chart">
           <polygon
-            points={getPoints({ fluidity: 10, interconnectivity: 10, adaptability: 10, nonFixity: 10, openness: 10, clarity: 10 })}
+            points={getPoints({ linkedKnowledge: 10, intuitiveInterface: 10, qualitativeLearning: 10, understandableExplanation: 10, interactiveExperience: 10, deepDive: 10 })}
             class="bg-polygon"
           />
           <polygon
-            points={getPoints({ fluidity: 5, interconnectivity: 5, adaptability: 5, nonFixity: 5, openness: 5, clarity: 5 })}
+            points={getPoints({ linkedKnowledge: 5, intuitiveInterface: 5, qualitativeLearning: 5, understandableExplanation: 5, interactiveExperience: 5, deepDive: 5 })}
             class="bg-polygon mid"
           />
 
-          <text x="150" y="36" text-anchor="middle">{t.axes.fluidity} ({evalData.scores.fluidity})</text>
-          <text x="260" y="90" text-anchor="middle">{t.axes.interconnectivity} ({evalData.scores.interconnectivity})</text>
-          <text x="260" y="224" text-anchor="middle">{t.axes.adaptability} ({evalData.scores.adaptability})</text>
-          <text x="150" y="278" text-anchor="middle">{t.axes.nonFixity} ({evalData.scores.nonFixity})</text>
-          <text x="40" y="224" text-anchor="middle">{t.axes.openness} ({evalData.scores.openness})</text>
-          <text x="40" y="90" text-anchor="middle">{t.axes.clarity} ({evalData.scores.clarity})</text>
+          <text x="150" y="34" text-anchor="middle">{t.axes.linkedKnowledge} ({evalData.scores.linkedKnowledge})</text>
+          <text x="260" y="90" text-anchor="middle">{t.axes.intuitiveInterface} ({evalData.scores.intuitiveInterface})</text>
+          <text x="260" y="224" text-anchor="middle">{t.axes.qualitativeLearning} ({evalData.scores.qualitativeLearning})</text>
+          <text x="150" y="280" text-anchor="middle">{t.axes.understandableExplanation} ({evalData.scores.understandableExplanation})</text>
+          <text x="40" y="224" text-anchor="middle">{t.axes.interactiveExperience} ({evalData.scores.interactiveExperience})</text>
+          <text x="40" y="90" text-anchor="middle">{t.axes.deepDive} ({evalData.scores.deepDive})</text>
 
           <polygon points={getPoints(evalData.scores)} class="score-polygon" />
         </svg>

@@ -5,7 +5,7 @@ import matter from 'gray-matter';
 import { glob } from 'glob';
 import dotenv from 'dotenv';
 
-dotenv.config();
+dotenv.config({ path: path.resolve(process.cwd(), '.env') });
 
 const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
 const OUTPUT_FILE = path.resolve('src/data/liquid-evals.json');
@@ -23,56 +23,63 @@ const responseSchema = {
     scores: {
       type: Type.OBJECT,
       properties: {
-        fluidity: { 
+        linkedKnowledge: { 
           type: Type.NUMBER, 
-          description: 'Score from 1 to 10 evaluating intellectual fluidity and seamless logical flow.' 
+          description: 'L - Score (1-10): Knowledge interconnectivity and contextual expansion across concepts.' 
         },
-        interconnectivity: { 
+        intuitiveInterface: { 
           type: Type.NUMBER, 
-          description: 'Score from 1 to 10 evaluating interdisciplinary bridges across concepts.' 
+          description: 'I - Score (1-10): Clarity, logical progression, and frictionless cognitive flow for newcomers.' 
         },
-        adaptability: { 
+        qualitativeLearning: { 
           type: Type.NUMBER, 
-          description: 'Score from 1 to 10 evaluating receptiveness to counterexamples and shifting contexts.' 
+          description: 'Q - Score (1-10): Depth and conceptual substance prioritized over mere quantity of information.' 
         },
-        nonFixity: { 
+        understandableExplanation: { 
           type: Type.NUMBER, 
-          description: 'Score from 1 to 10 evaluating resistance to rigid dogma and epistemic absolutes.' 
+          description: 'U - Score (1-10): Precision, conciseness, and rigor in explaining core mechanisms.' 
         },
-        openness: { 
+        interactiveExperience: { 
           type: Type.NUMBER, 
-          description: 'Score from 1 to 10 evaluating the degree to which it stimulates reader inquiry.' 
+          description: 'I - Score (1-10): Reader engagement, inquiry stimulation, and active cognitive exploration.' 
         },
-        clarity: { 
+        deepDive: { 
           type: Type.NUMBER, 
-          description: 'Score from 1 to 10 evaluating logical precision, conciseness, and structural density.' 
+          description: 'D - Score (1-10): Thoroughness from fundamental definitions to complete theoretical mastery.' 
         },
       },
-      required: ['fluidity', 'interconnectivity', 'adaptability', 'nonFixity', 'openness', 'clarity'],
+      required: [
+        'linkedKnowledge', 
+        'intuitiveInterface', 
+        'qualitativeLearning', 
+        'understandableExplanation', 
+        'interactiveExperience', 
+        'deepDive'
+      ],
     },
     totalScore: { 
       type: Type.NUMBER, 
-      description: 'Overall weighted average score rounded to one decimal place.' 
+      description: 'Overall arithmetic mean score rounded to one decimal place.' 
     },
     comment: { 
       type: Type.STRING, 
-      description: 'A concise critical synthesis (2-3 sentences) evaluating the text from the perspective of Liquid philosophy.' 
+      description: 'A critical synthesis (2-3 sentences) evaluating the document strictly against the LIQUID philosophy.' 
     },
   },
   required: ['scores', 'totalScore', 'comment'],
 };
 
 const SYSTEM_INSTRUCTION = `
-You are an expert epistemic critic evaluating technical, mathematical, and philosophical manuscripts through the framework of "Liquid Philosophy".
-Assess the provided document critically and objectively across six dimensions on a strict 1-10 scale:
+You are an expert curriculum and epistemic critic evaluating educational and technical manuscripts through the framework of the "LIQUID Philosophy".
+Critically assess the provided document on a strict 1–10 scale across the following 6 core pillars:
 
-[Evaluation Axes]
-1. Fluidity: Does the argument flow naturally without being constrained by rigid pedagogical conventions?
-2. Interconnectivity: Does the text construct meaningful connections across distinct domains, paradigms, or disciplines?
-3. Adaptability: Is the reasoning structured to withstand alternative perspectives, edge cases, and evolving contexts?
-4. Non-Fixity: Does it reject unreflective dogmatism, framing knowledge as an evolving landscape rather than a static monument?
-5. Openness: Does the discourse invite the reader into active intellectual exploration and further inquiry?
-6. Clarity: While remaining conceptually fluid, does the exposition preserve mathematical/technical rigor, brevity, and conceptual density?
+[LIQUID Evaluation Pillars]
+1. [L] Linked Knowledge: Knowledge is not isolated data, but expands in meaning through interconnected concepts. Does the text weave interdisciplinary bridges and conceptual relationships rather than treating facts in isolation?
+2. [I] Intuitive Interface: The structural layout and pedagogical flow should allow even first-time readers to grasp the progression effortlessly. Is the conceptual sequence natural, frictionless, and intuitively structured?
+3. [Q] Qualitative Learning: Prioritize intellectual depth and substantive insight over sheer volume. Does the exposition emphasize conceptual essence and genuine understanding rather than superficial cataloging?
+4. [U] Understandable Explanation: Clarity establishes credibility. Is the core exposition logically precise, mathematically rigorous, and articulate without unnecessary verbosity?
+5. [I] Interactive Experience: Transcend one-way didactic delivery by empowering readers to direct their own cognitive path. Does the discourse stimulate active inquiry, reflection, and self-guided exploration rather than passive reception?
+6. [D] Deep Dive: Pursue uncompromising thoroughness from foundational primitives to comprehensive theoretical mastery. Does the manuscript systematically build from first principles to exhaustive conceptual fluency?
 
 Provide the output strictly conforming to the requested JSON schema.
 `;
