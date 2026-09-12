@@ -3,8 +3,13 @@
 import Default from '@astrojs/starlight/components/Pagination.astro';
 import Comments from './Comments.astro';
 
-const { entry } = Astro.props;
-const isSplash = entry?.data?.template === 'splash';
+const starlightRoute = Astro.locals?.starlightRoute;
+const template = starlightRoute?.entry?.data?.template ?? Astro.props?.entry?.data?.template;
+
+const pathname = Astro.url.pathname;
+const isHomePath = pathname === '/' || pathname === '/en/' || pathname === '/ja/';
+
+const isSplash = template === 'splash' || isHomePath;
 ---
 
 <Default {...Astro.props}>
