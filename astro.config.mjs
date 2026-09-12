@@ -17,6 +17,9 @@ export default defineConfig({
 			title: 'Shine on Me: Tech & Math Archive',
 			customCss: ['./src/styles/custom.css'],
 			defaultLocale: 'root',
+			components: {
+				Pagination: './src/components/CustomPagination.astro',
+			},
 			locales: {
 				root: {
 					label: '한국어',
