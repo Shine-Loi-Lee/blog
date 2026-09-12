@@ -1,0 +1,102 @@
+---
+// src/components/CustomMarkdownContent.astro
+import Default from '@astrojs/starlight/components/MarkdownContent.astro';
+
+const starlightRoute = Astro.locals?.starlightRoute;
+const template = starlightRoute?.entry?.data?.template ?? Astro.props?.entry?.data?.template;
+const isSplash = template === 'splash';
+
+const toc = starlightRoute?.toc?.items ?? [];
+const hasToc = toc.length > 0;
+
+const currentLang = starlightRoute?.lang ?? 'ko';
+
+const tocTitles: Record<string, string> = {
+  ko: '목차',
+  en: 'Table of Contents',
+  ja: '目次',
+};
+
+const tocTitle = tocTitles[currentLang] ?? '목차';
+---
+
+{!isSplash && hasToc && (
+  <nav class="page-inline-toc" aria-label={tocTitle}>
+    <div class="toc-header">
+      <span class="toc-title">{tocTitle}</span>
+    </div>
+    <ol class="toc-list">
+      {toc.map((item: any) => (
+        <li>
+          <a href={`#${item.slug}`}>{item.text}</a>
+          {item.children && item.children.length > 0 && (
+            <ol class="toc-sublist">
+              {item.children.map((subItem: any) => (
+                <li>
+                  <a href={`#${subItem.slug}`}>{subItem.text}</a>
+                </li>
+              ))}
+            </ol>
+          )}
+        </li>
+      ))}
+    </ol>
+  </nav>
+)}
+
+<Default {...Astro.props}>
+  <slot />
+</Default>
+
+<style>
+  .page-inline-toc {
+    margin: 1.5rem 0 2.5rem 0;
+    padding: 1.25rem 1.75rem;
+    background-color: var(--sl-color-gray-6);
+    border: 1px solid var(--sl-color-gray-5);
+    border-radius: 0.75rem;
+  }
+
+  .toc-header {
+    margin-bottom: 0.75rem;
+  }
+
+  .toc-title {
+    font-weight: 700;
+    font-size: 1.05rem;
+    color: var(--sl-color-white);
+    letter-spacing: -0.01em;
+  }
+
+  .toc-list {
+    list-style-type: decimal;
+    margin: 0;
+    padding-left: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+
+  .toc-list li {
+    color: var(--sl-color-gray-3);
+  }
+
+  .toc-list a {
+    color: var(--sl-color-text-accent);
+    text-decoration: none;
+    font-size: 0.95rem;
+  }
+
+  .toc-list a:hover {
+    text-decoration: underline;
+  }
+
+  .toc-sublist {
+    list-style-type: disc;
+    margin-top: 0.25rem;
+    padding-left: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+</style>
