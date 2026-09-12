@@ -3,12 +3,16 @@
 import Default from '@astrojs/starlight/components/MarkdownContent.astro';
 
 const starlightRoute = Astro.locals?.starlightRoute;
-const template = starlightRoute?.entry?.data?.template ?? Astro.props?.entry?.data?.template;
-const isSplash = template === 'splash';
+
+const entryData = starlightRoute?.entry?.data ?? Astro.props?.entry?.data;
+
+const isSplash = entryData?.template === 'splash';
+const isTocDisabled = entryData?.tableOfContents === false;
 
 const rawToc = starlightRoute?.toc?.items ?? [];
 const toc = rawToc.filter((item: any) => item.slug !== '_top' && item.slug !== '');
-const hasToc = toc.length > 0;
+
+const showToc = !isSplash && !isTocDisabled && toc.length > 0;
 
 const currentLang = starlightRoute?.lang ?? 'ko';
 const tocTitles: Record<string, string> = {
@@ -20,7 +24,7 @@ const tocTitles: Record<string, string> = {
 const tocTitle = tocTitles[currentLang] ?? '목차';
 ---
 
-{!isSplash && hasToc && (
+{showToc && (
   <nav class="page-inline-toc" aria-label={tocTitle}>
     <div class="toc-header">
       <span class="toc-title">{tocTitle}</span>
