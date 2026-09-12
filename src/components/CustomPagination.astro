@@ -2,10 +2,13 @@
 // src/components/CustomPagination.astro
 import Default from '@astrojs/starlight/components/Pagination.astro';
 import Comments from './Comments.astro';
+
+const { entry } = Astro.props;
+const isSplash = entry?.data?.template === 'splash';
 ---
 
 <Default {...Astro.props}>
   <slot />
 </Default>
 
-<Comments />
+{!isSplash && <Comments />}
