@@ -1,6 +1,7 @@
 ---
 title: Categories
 description: Categories
+tableOfContents: false
 ---
 
 ## [Mathematics](/math/)
