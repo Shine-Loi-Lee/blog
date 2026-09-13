@@ -14,7 +14,7 @@ liquidEval: false
 * Algorithms
 * Computer Architecture
 
-## Programming Languages
+## [Programming Languages](/plang/)
 * [Programming Funcamentals (프로그래밍 기초)](/plang/programming-fundamentals/)
 * C++
 * Python
