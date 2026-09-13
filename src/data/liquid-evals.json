@@ -1,14 +1,14 @@
 {
   "plang/programming-fundamentals/1-1-terms": {
     "scores": {
-      "linkedKnowledge": 6,
+      "linkedKnowledge": 7.5,
       "intuitiveInterface": 8.5,
-      "qualitativeLearning": 6.5,
+      "qualitativeLearning": 8,
       "understandableExplanation": 8.5,
-      "interactiveExperience": 4,
-      "deepDive": 5.5
+      "interactiveExperience": 5,
+      "deepDive": 7
     },
-    "totalScore": 6.5,
-    "comment": "The document excels in structured visual formatting and concise, accessible explanations of fundamental development terms. However, it operates primarily as a passive glossary, lacking interactive inquiry prompts and granular theoretical mechanics such as AST parsing or static versus dynamic linking."
+    "totalScore": 7.4,
+    "comment": "The document presents a well-structured and intuitive overview of core programming terminology, effectively connecting source code processing stages with concrete runtime concepts. While the explanations are clear, precise, and emphasize key trade-offs, the manuscript lacks interactive inquiry elements and stays mostly at an introductory narrative level rather than offering an exhaustive deep dive."
   }
 }
