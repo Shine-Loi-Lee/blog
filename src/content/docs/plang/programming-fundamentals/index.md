@@ -15,7 +15,7 @@ sidebar:
 ## 학습 로드맵 (임시, 수정 예정)
 ### Phase 1: 프로그래밍 기본 개념 (Core Concepts)
 * [1-1. 개발 필수 용어](/plang/programming-fundamentals/1-1-terms/)
-* [1-2. 프로그래밍 언어 분류](#)
+* [1-2. 프로그래밍 언어 분류](/plang/programming-fundamentals/1-2-classification/)
 * [1-3. 코드의 기본 단위](#)
 
 ### Phase 2: 데이터 (Data)
