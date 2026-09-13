@@ -17,7 +17,7 @@ const i18n = {
       intuitiveInterface: 'I: 직관적 흐름',
       qualitativeLearning: 'Q: 질적 배움',
       understandableExplanation: 'U: 명료한 설명',
-      interactiveExperience: 'I: 상호작용성',
+      intrinsicEssence: 'I: 본질 탐구',
       deepDive: 'D: 심층 탐구',
     },
   },
@@ -30,7 +30,7 @@ const i18n = {
       intuitiveInterface: 'I: Intuitive Flow',
       qualitativeLearning: 'Q: Qualitative Learning',
       understandableExplanation: 'U: Understandable',
-      interactiveExperience: 'I: Interactive',
+      intrinsicEssence: 'I: Intrinsic Essence',
       deepDive: 'D: Deep Dive',
     },
   },
@@ -41,9 +41,9 @@ const i18n = {
     axes: {
       linkedKnowledge: 'L: 連結知識',
       intuitiveInterface: 'I: 直感的構造',
-      qualitativeLearning: 'Q: 質的学習',
+      qualitativeLearning: 'Q: 質적学習',
       understandableExplanation: 'U: 明瞭な説明',
-      interactiveExperience: 'I: 相互作用',
+      intrinsicEssence: 'I: 本質探求',
       deepDive: 'D: 深層探求',
     },
   },
@@ -64,7 +64,7 @@ function getPoints(scores: any) {
     scores.intuitiveInterface,
     scores.qualitativeLearning,
     scores.understandableExplanation,
-    scores.interactiveExperience,
+    scores.intrinsicEssence,
     scores.deepDive,
   ];
 
@@ -75,7 +75,7 @@ function getPoints(scores: any) {
   return values
     .map((val, i) => {
       const angle = (Math.PI / 3) * i - Math.PI / 2;
-      const r = (val / 10) * radius;
+      const r = ((val ?? 0) / 10) * radius;
       const x = centerX + r * Math.cos(angle);
       const y = centerY + r * Math.sin(angle);
       return `${x},${y}`;
@@ -95,11 +95,11 @@ function getPoints(scores: any) {
       <div class="chart-container">
         <svg viewBox="0 0 300 300" class="radar-chart" aria-label="LIQUID Radar Chart">
           <polygon
-            points={getPoints({ linkedKnowledge: 10, intuitiveInterface: 10, qualitativeLearning: 10, understandableExplanation: 10, interactiveExperience: 10, deepDive: 10 })}
+            points={getPoints({ linkedKnowledge: 10, intuitiveInterface: 10, qualitativeLearning: 10, understandableExplanation: 10, intrinsicEssence: 10, deepDive: 10 })}
             class="bg-polygon"
           />
           <polygon
-            points={getPoints({ linkedKnowledge: 5, intuitiveInterface: 5, qualitativeLearning: 5, understandableExplanation: 5, interactiveExperience: 5, deepDive: 5 })}
+            points={getPoints({ linkedKnowledge: 5, intuitiveInterface: 5, qualitativeLearning: 5, understandableExplanation: 5, intrinsicEssence: 5, deepDive: 5 })}
             class="bg-polygon mid"
           />
 
@@ -107,7 +107,7 @@ function getPoints(scores: any) {
           <text x="260" y="90" text-anchor="middle">{t.axes.intuitiveInterface} ({evalData.scores.intuitiveInterface})</text>
           <text x="260" y="224" text-anchor="middle">{t.axes.qualitativeLearning} ({evalData.scores.qualitativeLearning})</text>
           <text x="150" y="280" text-anchor="middle">{t.axes.understandableExplanation} ({evalData.scores.understandableExplanation})</text>
-          <text x="40" y="224" text-anchor="middle">{t.axes.interactiveExperience} ({evalData.scores.interactiveExperience})</text>
+          <text x="40" y="224" text-anchor="middle">{t.axes.intrinsicEssence} ({evalData.scores.intrinsicEssence})</text>
           <text x="40" y="90" text-anchor="middle">{t.axes.deepDive} ({evalData.scores.deepDive})</text>
 
           <polygon points={getPoints(evalData.scores)} class="score-polygon" />
