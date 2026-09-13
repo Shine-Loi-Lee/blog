@@ -85,6 +85,10 @@ Provide the output strictly conforming to the requested JSON schema.
 `;
 
 async function runEvaluation() {
+  const args = process.argv.slice(2);
+  const isForceAll = args.includes('--force');
+  const targetFilter = args.find(arg => !arg.startsWith('--'));
+  
   const files = await glob('src/content/docs/**/*.{md,mdx}');
   let evaluatedCount = 0;
 
@@ -97,6 +101,11 @@ async function runEvaluation() {
 
     let docId = path.relative('src/content/docs', filePath).replace(/\\/g, '/');
     docId = docId.replace(/\.(md|mdx)$/, '');
+
+    if (targetFilter && !docId.includes(targetFilter)) continue;
+
+    const shouldSkip = !isForceAll && !targetFilter && evalData[docId];
+    if (shouldSkip) continue;
 
     if (evalData[docId]) continue;
 
