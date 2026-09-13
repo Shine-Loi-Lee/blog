@@ -10,11 +10,12 @@ liquidEval: false
 * [Linear Algebra (선형대수학)](/math/linear-algebra/)
 
 ## Computer Science
+* Programming Paradigms
 * Algorithms
 * Computer Architecture
 
 ## Programming Languages
-* Object-Oriented Paradigm
+* [Programming Funcamentals (프로그래밍 기초)](/plang/programming-fundamentals/)
 * C++
 * Python
 
