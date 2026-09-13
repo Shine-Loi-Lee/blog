@@ -7,8 +7,8 @@ sidebar:
  hidden: true
 ---
 
-* **객체지향 패러다임**
-  * [시작하기 →](#)
+* **프로그래밍 기초**
+  * [시작하기 →](/programming-fundamentals/)
 
 * **C++**
   * [시작하기 →](#)
