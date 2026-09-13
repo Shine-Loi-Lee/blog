@@ -8,7 +8,7 @@ sidebar:
 ---
 
 * **고전역학 (Classical Mechanics)**
-  * [시작하기 →](/physics/physics/)
+  * [시작하기 →](/physics/classical-mechanics/)
 
 * **전자기학 (Electromagnetism)**
   * [시작하기 →](#)
