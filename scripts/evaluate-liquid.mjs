@@ -39,13 +39,13 @@ const responseSchema = {
           type: Type.NUMBER, 
           description: 'U - Score (1-10): Precision, conciseness, and rigor in explaining core mechanisms.' 
         },
-        interactiveExperience: { 
+        intrinsicEssence: { 
           type: Type.NUMBER, 
-          description: 'I - Score (1-10): Reader engagement, inquiry stimulation, and active cognitive exploration.' 
+          description: 'I - Score (1-10): In-depth examination of first principles, underlying mechanisms, and fundamental necessity rather than superficial syntax or rote formulas.' 
         },
         deepDive: { 
           type: Type.NUMBER, 
-          description: 'D - Score (1-10): Thoroughness from fundamental definitions to complete theoretical mastery.' 
+          description: 'D - Score (1-10): Thoroughness from foundational definitions to complete theoretical mastery.' 
         },
       },
       required: [
@@ -53,7 +53,7 @@ const responseSchema = {
         'intuitiveInterface', 
         'qualitativeLearning', 
         'understandableExplanation', 
-        'interactiveExperience', 
+        'intrinsicEssence', 
         'deepDive'
       ],
     },
@@ -78,7 +78,7 @@ Critically assess the provided document on a strict 1–10 scale across the foll
 2. [I] Intuitive Interface: The structural layout and pedagogical flow should allow even first-time readers to grasp the progression effortlessly. Is the conceptual sequence natural, frictionless, and intuitively structured?
 3. [Q] Qualitative Learning: Prioritize intellectual depth and substantive insight over sheer volume. Does the exposition emphasize conceptual essence and genuine understanding rather than superficial cataloging?
 4. [U] Understandable Explanation: Clarity establishes credibility. Is the core exposition logically precise, mathematically rigorous, and articulate without unnecessary verbosity?
-5. [I] Interactive Experience: Transcend one-way didactic delivery by empowering readers to direct their own cognitive path. Does the discourse stimulate active inquiry, reflection, and self-guided exploration rather than passive reception?
+5. [I] Intrinsic Essence: Transcend superficial syntax, API usage, or isolated memorization. Does the discourse dissect the fundamental raison d'être, underlying physical/mathematical mechanics, and intrinsic nature of the subject?
 6. [D] Deep Dive: Pursue uncompromising thoroughness from foundational primitives to comprehensive theoretical mastery. Does the manuscript systematically build from first principles to exhaustive conceptual fluency?
 
 Provide the output strictly conforming to the requested JSON schema.
@@ -106,8 +106,6 @@ async function runEvaluation() {
 
     const shouldSkip = !isForceAll && !targetFilter && evalData[docId];
     if (shouldSkip) continue;
-
-    if (evalData[docId]) continue;
 
     try {
       const response = await ai.models.generateContent({
