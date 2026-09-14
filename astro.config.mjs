@@ -53,7 +53,11 @@ export default defineConfig({
 					},
 				}, // RSS
 			],
-			sidebar: [{ // Categories
+			sidebar: [{ // Home
+    				label: 'Home',
+			    	link: '/',
+				}, // Home
+				{ // Categories
     				label: 'Categories',
 			    	link: '/categories/',
 				}, // Categories
