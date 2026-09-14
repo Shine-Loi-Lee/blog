@@ -37,14 +37,14 @@
   },
   "plang/programming-fundamentals/2-1-variables": {
     "scores": {
-      "linkedKnowledge": 5,
-      "intuitiveInterface": 8,
-      "qualitativeLearning": 5,
-      "understandableExplanation": 7,
-      "intrinsicEssence": 4,
-      "deepDive": 4
+      "linkedKnowledge": 7,
+      "intuitiveInterface": 8.5,
+      "qualitativeLearning": 7.5,
+      "understandableExplanation": 8.5,
+      "intrinsicEssence": 7.5,
+      "deepDive": 6.5
     },
-    "totalScore": 5.5,
-    "comment": "The manuscript offers a clean and intuitively structured overview of variables, constants, and literals, making it accessible for beginners. However, it lacks deep first-principles analysis regarding lower-level memory mechanics, compiler handling of static literals, and underlying computer architecture."
+    "totalScore": 7.6,
+    "comment": "The manuscript delivers a clear and logically organized conceptual breakdown, effectively highlighting low-level insights such as compiler symbol table registration and the distinction between compile-time and runtime constants. While the pedagogical structure is crisp and highly intuitive for introductory learners, it lacks a comprehensive deep dive into actual assembly-level memory layouts, stack versus heap allocation dynamics, and advanced type system interactions."
   }
 }
