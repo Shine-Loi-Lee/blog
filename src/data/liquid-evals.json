@@ -22,5 +22,17 @@
     },
     "totalScore": 8.2,
     "comment": "The document provides a remarkably clear, structured, and accessible overview of programming language taxonomies, clearly contrasting operational mechanisms and trade-offs. While it excels at delivering intuitive conceptual boundaries and pragmatic context, it remains focused on high-level educational summaries rather than delving into lower-level theoretical foundations such as formal semantics or Turing completeness."
+  },
+  "plang/programming-fundamentals/1-3-code-units": {
+    "scores": {
+      "linkedKnowledge": 6,
+      "intuitiveInterface": 8,
+      "qualitativeLearning": 6.5,
+      "understandableExplanation": 8,
+      "intrinsicEssence": 6,
+      "deepDive": 5.5
+    },
+    "totalScore": 6.7,
+    "comment": "본 문서는 프로그래밍의 기초 개념인 구문/의미의 차이와 기본 구성 요소를 명확하고 직관적인 구조로 명쾌하게 설명합니다. 다만 어휘 분석(Lexical Analysis)이나 AST(추상 구문 트리) 구성 등 컴파일러의 실제 내적 동작 메커니즘에 대한 심도 있는 논의가 부족합니다. 입문용 자료로는 뛰어난 가독성을 지니지만, LIQUID 철학이 지향하는 근본적 깊이와 심층적 이론 전개에는 일정 부분 한계가 있습니다."
   }
 }
