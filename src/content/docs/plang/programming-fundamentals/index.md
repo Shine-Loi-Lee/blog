@@ -19,7 +19,7 @@ sidebar:
 * [1-3. 코드의 기본 단위](/plang/programming-fundamentals/1-3-code-units/)
 
 ### Phase 2: 데이터 (Data)
-* [2-1. 변수, 상수, 리터럴](#)
+* [2-1. 변수, 상수, 리터럴](/plang/programming-fundamentals/2-1-variables/)
 * [2-2. 원시 자료형](#)
 * [2-3. 정적 타입, 동적 타입](#)
 * [2-4. 암시적 변환, 명시적 변환](#)
