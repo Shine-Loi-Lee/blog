@@ -34,5 +34,17 @@
     },
     "totalScore": 8.1,
     "comment": "The document effectively connects basic code primitives to underlying compiler mechanics such as lexical analysis, AST creation, and runtime execution contexts. It balances foundational accessibility with technical precision by systematically clarifying the role of syntax, static/dynamic semantics, and language execution models. Incorporating explicit visual AST nodes or binary level entry point details would further deepen its conceptual rigor."
+  },
+  "plang/programming-fundamentals/2-1-variables": {
+    "scores": {
+      "linkedKnowledge": 5,
+      "intuitiveInterface": 8,
+      "qualitativeLearning": 5,
+      "understandableExplanation": 7,
+      "intrinsicEssence": 4,
+      "deepDive": 4
+    },
+    "totalScore": 5.5,
+    "comment": "The manuscript offers a clean and intuitively structured overview of variables, constants, and literals, making it accessible for beginners. However, it lacks deep first-principles analysis regarding lower-level memory mechanics, compiler handling of static literals, and underlying computer architecture."
   }
 }
