@@ -22,7 +22,7 @@ sidebar:
 * [2-1. 변수, 상수, 리터럴](/plang/programming-fundamentals/2-1-variables/)
 * [2-2. 원시 자료형](/plang/programming-fundamentals/2-2-primitive-types/)
 * [2-3. 정적 타입, 동적 타입](/plang/programming-fundamentals/2-3-type-systems/)
-* [2-4. 암시적 변환, 명시적 변환](#)
+* [2-4. 암시적 변환, 명시적 변환](/plang/programming-fundamentals/2-4-type-conversion/)
 
 ### Phase 3: 연산자 (Operators)
 * [3-1. 산술연산자, 대입연산자](#)
